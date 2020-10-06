@@ -1,0 +1,126 @@
+
+.container-2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #E0FEFE;
+   
+}
+.container-2 h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+}
+.container-2 .task{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: larger;
+}
+.container-2 #probeta{
+    content: url('../iconos/Probeta/0.png');
+    width: 15.625rem;
+    align-self: center;
+    margin: 1.5rem;
+}
+/* 
+    ██████████████
+    █ MATERIALES █
+    ██████████████
+
+*/
+.container-2 .materials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-2 .materials .miel{
+    content: url('../iconos/maple/1.png');
+    width: 150px;
+    margin: 1.5rem;
+    transition: .3s;
+    border-radius: 1.5rem;
+}
+.container-2 .materials .miel:hover{
+    background-color: rgb(165, 165, 165);
+}
+.container-2 .materials #btnMiel{
+    display: none;
+}
+.container-2 .materials #btnMiel:checked + label > .miel{
+    content: url('../iconos/maple/2.png');
+
+}
+
+.container-2 .materials .jabon{
+    content: url('../iconos/jabon/1.png');
+    width: 150px;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+    transition: .3s;
+}
+.container-2 .materials .jabon:hover{
+    background-color: rgb(165, 165, 165);
+}
+.container-2 .materials #btnJabon{
+    display: none;
+}
+.container-2 .materials #btnJabon:checked + label > .jabon{
+    content: url('../iconos/jabon/2.png');
+
+}
+
+
+.container-2 .materials .agua{
+    content: url('../iconos/agua/1.png');
+    width: 150px;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+    transition: .3s;
+}
+.container-2 .materials .agua:hover{
+    background-color: rgb(165, 165, 165);
+}
+.container-2 .materials #btnAgua{
+    display: none;
+}
+.container-2 .materials #btnAgua:checked + label > .agua{
+    content: url('../iconos/agua/2.png');
+
+}
+
+
+.container-2 .materials .aceite{
+    content: url('../iconos/aceite/1.png');
+    width: 150px;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+    transition: .3s;
+}
+.container-2 .materials .aceite:hover{
+    background-color: rgb(165, 165, 165);
+}
+.container-2 .materials #btnAceite{
+    display: none;
+}
+.container-2 .materials #btnAceite:checked + label > .aceite{
+    content: url('../iconos/aceite/2.png');
+}
+
+
+.container-2 .materials .alcohol{
+    content: url('../iconos/alcohol/1.png');
+    width: 150px;
+    margin: 1.5rem;
+    border-radius: 1.5rem;
+    transition: .3s;
+}
+.container-2 .materials .alcohol:hover{
+    background-color: rgb(165, 165, 165);
+}
+.container-2 .materials #btnAlcohol{
+    display: none;
+}
+.container-2 .materials #btnAlcohol:checked + label > .alcohol{
+    content: url('../iconos/alcohol/2.png');
+}

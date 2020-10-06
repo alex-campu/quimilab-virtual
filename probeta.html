@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probeta</title>
+    <link rel="stylesheet" href="assets/css/styleProbeta.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/iconos/alcohol/1.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container-2">
+        <h1 class="task">En la probeta agrega lentamente y con mucho cuidado los <b>20 mL</b> de las sustancias
+            indicadas.<br>Es importante que lo hagas en el orden en el que están enlistadas.<br>¿Qué ocurre?</h1>
+        <div id="probeta"></div>
+        <div class="materials">
+
+            <input type="checkbox" id="btnMiel" name="Miel" onclick="Materials('Miel')" />
+            <label class="btn" for="btnMiel">
+                <div class="miel"></div>
+            </label>
+
+            <input type="checkbox" id="btnJabon" onclick="Materials('Jabon')" name="Jabón" />
+            <label class="btn" for="btnJabon">
+                <div class="jabon"></div>
+            </label>
+
+            <input type="checkbox" id="btnAgua" onclick="Materials('Agua')" name="Agua" />
+            <label class="btn" for="btnAgua">
+                <div class="agua"></div>
+            </label>
+
+            <input type="checkbox" id="btnAceite" onclick="Materials('Aceite')" name="Aceite" />
+            <label class="btn" for="btnAceite">
+                <div class="aceite"></div>
+            </label>
+
+            <input type="checkbox" id="btnAlcohol" onclick="Materials('Alcohol')" name="Alcohol" />
+            <label class="btn" for="btnAlcohol">
+                <div class="alcohol"></div>
+            </label>
+        </div>
+    </div>
+    <script>
+        // Miel
+        function Materials(quienSoy) {
+            // Materiales
+            var miel = document.getElementById('btnMiel').checked;
+            var jabon = document.getElementById('btnJabon').checked;
+            var agua = document.getElementById('btnAgua').checked;
+            var aceite = document.getElementById('btnAceite').checked;
+            var probeta = document.getElementById('probeta');
+
+
+
+            switch (quienSoy) {
+                case 'Miel':
+                    probeta.style.content = 'url("assets/iconos/Probeta/1.png")';
+                    break;
+                case 'Jabon':
+                    if (!miel) {
+                        tenerCuidado();
+                        document.getElementById('btnJabon').checked = false;
+                    } else {
+                        probeta.style.content = 'url("assets/iconos/Probeta/2.png")';
+                    }
+                    break;
+                case 'Agua':
+                    if (!(miel && jabon)) {
+                        tenerCuidado();
+                        document.getElementById('btnAgua').checked = false;
+                    } else {
+                        probeta.style.content = 'url("assets/iconos/Probeta/3.png")';
+                    }
+                    break;
+                case 'Aceite':
+                    if (!(miel && jabon && agua)) {
+                        tenerCuidado();
+                        document.getElementById('btnAceite').checked = false;
+                    } else {
+                        probeta.style.content = 'url("assets/iconos/Probeta/4.png")';
+                    }
+                    break;
+                case 'Alcohol':
+                    if (!(miel && jabon && agua && aceite)) {
+                        tenerCuidado();
+                        document.getElementById('btnAlcohol').checked = false;
+                    } else {
+                        probeta.style.content = 'url("assets/iconos/Probeta/5.png")';
+                    }
+                    break;
+            }
+        }
+
+        function tenerCuidado() {
+            alert('Cuidado, revisa el orden en que debes agregar las sustancias');
+        }
+        function wait(ms) {
+            var start = new Date().getTime();
+            var end = start;
+            while (end < start + ms) {
+                end = new Date().getTime();
+            }
+        }
+        function wait(ms) {
+            var start = new Date().getTime();
+            var end = start;
+            while (end < start + ms) {
+                end = new Date().getTime();
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<style>
+    .container-2{
+        border: 1px solid red;
+    }
+</style>
