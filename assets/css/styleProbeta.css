@@ -124,3 +124,14 @@
 .container-2 .materials #btnAlcohol:checked + label > .alcohol{
     content: url('../iconos/alcohol/2.png');
 }
+
+.materials{ 
+   
+}
+
+@media only screen and (max-width: 50rem) {
+.materials {
+flex-direction: column;
+
+}
+}
