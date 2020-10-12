@@ -6,48 +6,50 @@
         var jabon = document.getElementById('btnJabon').checked;
         var agua = document.getElementById('btnAgua').checked;
         var aceite = document.getElementById('btnAceite').checked;
+        var alcohol = document.getElementById('btnAlcohol').checked;
         var probeta = document.getElementById('probeta');
 
 
 
-        switch (quienSoy) {
-            case 'Miel': 1
-                ml('Miel');
+        
+        switch (quienSoy){
+            case 'Agua':
+                ml('Agua');
                 probeta.style.content = 'url("assets/iconos/Probeta/1.png")';
                 break;
-            case 'Jabon':
-                if (!miel) {
-                    tenerCuidado();
-                    document.getElementById('btnJabon').checked = false;
-                } else {
-                    ml('Jabón');
-                    probeta.style.content = 'url("assets/iconos/Probeta/2.png")';
-                }
-                break;
-            case 'Agua':
-                if (!(miel && jabon)) {
-                    tenerCuidado();
-                    document.getElementById('btnAgua').checked = false;
-                } else {
-                    ml('Agua')
-                    probeta.style.content = 'url("assets/iconos/Probeta/3.png")';
-                }
-                break;
             case 'Aceite':
-                if (!(miel && jabon && agua)) {
+                if (!agua) {
                     tenerCuidado();
                     document.getElementById('btnAceite').checked = false;
                 } else {
-                    ml('Aceite')
-                    probeta.style.content = 'url("assets/iconos/Probeta/4.png")';
+                    ml('Aceite');
+                    probeta.style.content = 'url("assets/iconos/Probeta/2.png")';
                 }
                 break;
             case 'Alcohol':
-                if (!(miel && jabon && agua && aceite)) {
+                if(!(agua && aceite)){
                     tenerCuidado();
                     document.getElementById('btnAlcohol').checked = false;
                 } else {
                     ml('Alcohol');
+                    probeta.style.content = 'url("assets/iconos/Probeta/3.png")';
+                }
+                break;
+            case 'Jabon':
+                if(!(agua && aceite && alcohol)){
+                    tenerCuidado();
+                    document.getElementById('btnJabon').checked = false;
+                } else {
+                    ml('Jabón');
+                    probeta.style.content = 'url("assets/iconos/Probeta/4.png")';
+                }
+                break;
+            case 'Miel':
+                if(!(agua && aceite && alcohol && jabon)){
+                    tenerCuidado();
+                    document.getElementById('btnMiel').checked = false;
+                } else {
+                    ml('Miel');
                     probeta.style.content = 'url("assets/iconos/Probeta/5.png")';
                 }
                 break;
