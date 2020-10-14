@@ -14,7 +14,7 @@ function showFin() {
  }
  
  function finalProof() {
-    alert("Felicidades, haz completado la práctica, tu código de comprobación es: " + genCode(10) + ", copialo para mostrarlo luego a tu maestra");
+    alert("Felicidades, has completado la práctica, tu código de comprobación es: " + genCode(10) + ", copialo para mostrarlo luego a tu maestra");
  }
 
   // Miel
