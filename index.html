@@ -30,6 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 
 
@@ -167,10 +168,11 @@
     <div class="container-2">
         <br> <br>
         <h1 id="pct-1.2" class="animate__animated animate__backInDown">Torre de densidades</h1>
-        <h1 class="task animate__animated animate__backInDown">
+        <h1 class="task animate__animated animate__backInDown" id="finale" onclick="finale()">
             Para agregar una sustancia a la probeta solo haz click en el recipiente deseado. Introducelos de izquierda a derecha <br>
         Revisa tus apuntes para determinar la cantidad correcta</h1>
         <div id="probeta" class="animate__animated animate__backInDown"></div>
+        <button id="fin" type="button" class="btn btn-primary" onclick="finalProof()">Finalizar práctica</button>
         <div class="materials animate__animated animate__backInDown">
 
             <input type="checkbox" id="btnAgua" onclick="Materials('Agua')" name="Agua" />
@@ -195,14 +197,14 @@
 
             <input type="checkbox" id="btnMiel" name="Miel" onclick="Materials('Miel')" />
             <label class="btn" for="btnMiel">
-                <div class="miel"></div>
+                <div id="finale" class="miel show-btn"></div>
             </label>
 
-            
+           
         </div>
-
+       
     </div>
-
+    
 
     <div id="blog" class="content-block content-block-gray">
         <div class="container">

@@ -1,5 +1,23 @@
 
-    // Miel
+function showFin() {
+    document.getElementById("fin").style.display = "block";
+  }
+ 
+  function genCode(length) {
+    var result           = '';
+    var characters       = 'ABCDEFvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+ }
+ 
+ function finalProof() {
+    alert("Felicidades, haz completado la práctica, tu código de comprobación es: " + genCode(10) + ", copialo para mostrarlo luego a tu maestra");
+ }
+
+  // Miel
     function Materials(quienSoy) {
         // Materiales
         var miel = document.getElementById('btnMiel').checked;
@@ -51,6 +69,7 @@
                 } else {
                     ml('Miel');
                     probeta.style.content = 'url("assets/iconos/Probeta/5.png")';
+                    showFin();
                 }
                 break;
         }
@@ -82,3 +101,22 @@
             end = new Date().getTime();
         }
     }
+//function fin() {
+    
+  //      $("#fin").removeAttr("display");
+    //}
+   
+  //    $(document).ready(function(){
+        // Set div display to none
+        
+        // Set div display to block
+       /* $(".show-btn").click(function(){
+            $("#fin").css("display", "block");  
+        });
+        }); */
+   
+// if(!(agua && aceite && alcohol && jabon)){
+
+  /*  if(edad===18) {
+        console.log("blabla");
+    } */

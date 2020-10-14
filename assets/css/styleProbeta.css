@@ -125,3 +125,9 @@
   flex-wrap: wrap;
   }
 }
+
+#fin {
+ /* position: absolute; */
+
+ display: none; 
+}
