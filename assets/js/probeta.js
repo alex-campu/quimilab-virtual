@@ -13,8 +13,9 @@ function showFin() {
     return result;
  }
  
+ var codeFin = genCode(10);
  function finalProof() {
-    alert("Felicidades, has completado la práctica, tu código de comprobación es: " + genCode(10) + ", copialo para mostrarlo luego a tu maestra");
+    alert("Felicidades, has completado la práctica, tu código de comprobación es: " + codeFin + ", copialo para mostrarlo luego a tu maestra");
  }
 
   // Miel
@@ -36,11 +37,12 @@ function showFin() {
                 probeta.style.content = 'url("assets/iconos/Probeta/1.png")';
                 break;
             case 'Aceite':
+              
                 if (!agua) {
                     tenerCuidado();
                     document.getElementById('btnAceite').checked = false;
-                } else {
-                    ml('Aceite');
+                } else {             
+                    ml('Aceite');                   
                     probeta.style.content = 'url("assets/iconos/Probeta/2.png")';
                 }
                 break;
@@ -49,7 +51,7 @@ function showFin() {
                     tenerCuidado();
                     document.getElementById('btnAlcohol').checked = false;
                 } else {
-                    ml('Alcohol');
+                    ml('Alcohol');                  
                     probeta.style.content = 'url("assets/iconos/Probeta/3.png")';
                 }
                 break;

@@ -1,0 +1,193 @@
+.male {
+    
+  /*  width: 70vw; */
+  width: 100%;
+    height: 15vw;
+     /*height: 50vw; */
+    display:flex;
+    justify-content: center;
+ /*   border: 1px solid green; */
+}
+
+.container-m {
+  /*  border: 1px solid red; */
+    width: 90%; 
+    margin: auto;
+}
+
+img.maletin {
+
+  /* width: 40vw; */
+  width: 70%;
+  height: 25vw;
+  position: absolute;  
+} 
+
+img.straw  {
+    width: 11vw;
+    position: relative;
+    left: -9vw;
+    top: 6vw;
+    transition: transform .2s;
+}
+
+img.straw:hover, img.plasti:hover, img.balin:hover, img.rule:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+
+
+
+img.plasti {
+    width: 15vw;
+    position: relative;
+    left: 1vw;
+    top: 3vw;
+    transition: transform .2s;
+}
+
+img.balin {
+    width: 12vw;
+    position: relative;
+    left: 18vw;
+    top: 5vw;
+    transition: transform .2s;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+}
+
+img.big-straw {
+    width: 48vw;
+   margin-top: 9.5vw; 
+    position: absolute;
+    display: none;
+    opacity: 0;
+    transition: transform .2s;
+}
+
+img.big-straw-p {
+    width: 41vw;
+   margin-top: 3.5vw; 
+    position: absolute;
+    display: none;
+    opacity: 0;
+    transition: transform .2s;
+}
+
+img.big-straw-v {
+    width: 24vw;
+   margin-top: 3.5vw; 
+    position: absolute;
+    display: none ;
+    opacity: 0 ;
+    transition: transform .2s;
+    left: 18.5vw;
+}
+
+img.big-straw-0, img.big-straw-1, img.big-straw-2, img.big-straw-3 {
+    width: 40vw;
+    display: none;
+    margin-top: 2vw;
+    position: absolute;
+    opacity: 0;
+}
+
+img.rule {
+    width: 30vw;
+    height: 5vw;
+    margin-top: 1vw;
+    transition: transform .2s;
+    position: relative;
+  
+}
+
+.sub-container-m {
+    display: flex;
+    justify-content: center;
+}
+
+img.rule-angle {
+    width: 40vw;
+    position: absolute;
+    top: 50vw;
+    left: 22.5vw;
+}
+
+.straw-rule {
+    display: none;
+    opacity: 0;
+  }
+
+#straw-rule {
+     /* margin-top: 9.5vw;
+      width: 48vw !important*/
+      transition: transform .2s;
+  }
+
+.mark:hover  {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+#straw-rule:hover, img.big-straw:hover,  img.big-straw-p:hover, img.big-straw-v:hover {
+    -ms-transform: scale(1.03); /* IE 9 */
+    -webkit-transform: scale(1.03); /* Safari 3-8 */
+    transform: scale(1.03); 
+}
+
+img.mark {
+    width: 5vw;
+    transition: transform .2s;
+    position: relative;
+    top: 47vw;
+    left: 26vw;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+.ensayo1 {
+ margin-top: 30vw;
+ width: 50vw;
+ position: absolute;
+ display: none;
+ opacity: 0;
+}
+
+.ensayo2 {
+    margin-top: 32vw;
+    width: 50vw;
+    position: absolute;
+    display: none;
+    opacity: 0;
+   }
+
+ #go, #up {
+     position: relative;
+     left: 17vw;
+     top: 22vw;
+     display: none;
+     opacity: 0;
+ }  
+
+ #endP{
+    position: relative;
+    left: 17vw;
+    top: 26vw;
+   display: none;
+    opacity: 0; 
+} 
+
+.mark-position {
+    margin-top: -16vw;
+    margin-left: -94vw;
+}
+
+button#up, button#go, button#endP {
+    height: 3vw;
+}

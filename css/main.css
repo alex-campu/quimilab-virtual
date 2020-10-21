@@ -400,3 +400,13 @@ img.logo-banner {
     top: 6vw;
     
 }
+
+.popote-banner {
+    background-color: #ec343c;
+    height: 5vw;
+}
+
+.popote-container {
+    border: 1px solid red;
+    height: 80vw;
+}
