@@ -202,6 +202,9 @@ margin-bottom: 2vw;
 
 @media (max-width: 1016px){
     button#up, button#go, button#endP {
-        height: 5vw;
+        height: 9vw;
+        font-size: 3vw;
+        left: 12vw !important;
+
     }
     }
