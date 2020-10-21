@@ -199,3 +199,9 @@ button#up, button#go, button#endP {
 .flota-container {
 margin-bottom: 2vw;
 }
+
+@media (max-width: 1016px){
+    button#up, button#go, button#endP {
+        height: 5vw;
+    }
+    }
