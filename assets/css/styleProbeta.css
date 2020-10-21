@@ -4,7 +4,7 @@
   flex-direction: column;
   background-color: #e0fefe;
 }
-.container-2 h1 {
+.container-2 h1, .flota-container h1 {
   font-family: "Roboto", sans-serif;
   text-align: center;
 }

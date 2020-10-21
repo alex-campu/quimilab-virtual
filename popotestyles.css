@@ -50,7 +50,7 @@ img.plasti {
 img.balin {
     width: 12vw;
     position: relative;
-    left: 18vw;
+    left: 12vw;
     top: 5vw;
     transition: transform .2s;
 }
@@ -175,6 +175,10 @@ img.mark {
      opacity: 0;
  }  
 
+ #flota {
+     margin-bottom: 2vw;
+ }
+
  #endP{
     position: relative;
     left: 17vw;
@@ -190,4 +194,8 @@ img.mark {
 
 button#up, button#go, button#endP {
     height: 3vw;
+}
+
+.flota-container {
+margin-bottom: 2vw;
 }
