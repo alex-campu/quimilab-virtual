@@ -180,3 +180,13 @@ transform: scale(1.5);
     right: 50.5vw;
     opacity: 0;
 }
+#guardar-3{
+    position: absolute;
+    top: 22.1vw;
+    right: 50.5vw;
+    opacity: 0;
+}
+
+.instructions-c, .sep-container{
+    background-color: #e0fefe;
+}

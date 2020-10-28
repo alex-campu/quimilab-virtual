@@ -308,8 +308,25 @@
 <div class="popote-banner">
 
 </div>
+<div class="instructions-c">
+    <h1 id="sep">Separación de mezclas</h1>
+    <p>  Sigue los pasos en el orden indicado</p>
+    <ol>
+        <li>Selecciona el vaso para iniciar</li>
+        <li>Agrega agua haciendo click en la pizeta</li>
+        <li>Añade tierra (da click en el primer elemento de la lista)</li>
+        <li>Añade rebabas de hierro (lo encuentras debajo de la tierra)</li>
+        <li>Espera a que las rebabas caigan al fondo del vaso, luego haz click en el imán para empezar con la separación de mezclas </li>
+        <li>Tardará unos segundos recolectando el hierro, luego haz click en “Guardar imán” (Como puedes ver el hierro se ha separado fácilmente de la solución, continuaremos con el filtrado de la tierra).</li>
+        <li>Haz click en el filtro (es el último elemento). Observa que se añade un popote negro que nos ayudará a vertir la sustancia.</li>
+        <li>Haz click en el vaso para colocarlo debajo del filtro </li>
+        <li>Para llenar el filtro selecciona el botón y espera</li>
+        <li>Último paso, selecciona “Filtrar” y observa como el filtro retiene la tierra mientras que el vaso almacena sólo el agua.</li>
+        <li>Guarda los materiales para finalizar tu práctica </li>
+    </ol>
+</div> 
 <div class="sep-container">
-    <h1 id="">Separación</h1>
+ <!-- <h1 id="">Separación</h1> -->
  <img id="ground" class="sep-pack" src="./separacion/ground.png" alt="">
 <img id="burrs" class="sep-pack" src="./separacion/burrs.png" alt="">
 <img id="vasin" class="sep-pack" src="./separacion/vaso.png" alt="">
@@ -340,6 +357,7 @@
 <button id="filtrar" type="button" class="btn btn-primary">Filtrar</button>
 <button id="guardar" type="button" class="btn btn-primary">Guardar Imán</button>
 <button id="guardar-2" type="button" class="btn btn-primary">Guardar Materiales</button>
+<button id="guardar-3" type="button" onclick="finalProof3()" class="btn btn-primary">Finalizar práctica</button>
 <script>
     var cnt = 0;
 function cnt_click() {
@@ -454,12 +472,28 @@ $(document).ready(function() {
     $("#w-g").animate({top: '-=8.5vw', right: '-=6vw', width: '-=2vw'}, 3000); 
     $("#fill-w-3").animate({top: '-=6vw', right: '-=4vw', width: '-=6vw', height: '-=6vw'}, 3000); 
     $("#guardar-2").animate({opacity:'0'},3000);
+    $("#guardar-3").animate({opacity:'1'},5000);
     }
     });
     
 });
 </script>
+<script>
+    function genCode3(length) {
+var result           = '';
+var characters       = 'ABCDEFvwxyz0123456789';
+var charactersLength = characters.length;
+for ( var i = 0; i < length; i++ ) {
+   result += characters.charAt(Math.floor(Math.random() * charactersLength));
+}
+return result;
+}
 
+var codeFin = genCode3(10);
+function finalProof3() {
+alert("Felicidades, has completado la práctica, tu código de comprobación es: " + codeFin + ", copialo para mostrarlo luego a tu maestra");
+}
+</script>
 
 
 
