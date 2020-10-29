@@ -1,42 +1,13 @@
-#Photographer
+# quimilab-virtual
+Practicas de química de manera virtual para educación nivel secundaria (13-15 años)
 
-An awesome free one page HTML template for your startup business or personal website.
+Quimilab es una herramienta para que puedas realizar experimentos de química desde la comodidad
+de tu hogar. ¡Disfruta este laboratorio que hemos preparado para ti!
 
-#Features
-
-- A very Unique, Mordern and beautiful Design.
-- Background Slider
-- Optimized Code & Content
-- HiDPI / Retina Ready
-- Clean Code
-- Cross-browser Compatibility
-- CSS3 Animations
-- SEO Optimized
-- 100% Fully Customizable
-- Sticky Header 
-- Google Fonts
-- Built with HTML5 & CSS3
-- Strong focus on Usability and UX
-- Responsive layout
-- CSS Framework - Bootstrap 3
-- FontAwesome Icon Integrated
-- Clean and stylish UI
-- Smooth CSS3 animation
-- Well commented coding
-- Easy to use
-- It's Free!
-
-
-#Screenshot
-
-
-![Screenshot of Photographer]
-(https://raw.githubusercontent.com/technext/Photographer/master/PHOTOGRAPHER.jpg)
-
-#Demo Link
-Check out the demo of Flusk responsive HTML template at (http://themewagon.com/demo/Photographer/)
-
-
-
-
-
+ “Equipado con sus cinco sentidos, el hombre explora el universo que lo rodea y a sus aventuras
+ las llama ciencia”
+  
+   -Edwin Hubble
+   
+   
+   
