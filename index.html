@@ -193,8 +193,8 @@
         <br> <br>
         <a href="pdfsPracticas/practica 1.2.pdf"><h1 id="pct-1.2" class="animate__animated animate__backInDown">Torre de densidades</h1></a>
         <h1 class="task animate__animated animate__backInDown" id="finale" onclick="finale()">
-            Para agregar una sustancia a la probeta solo haz click en el recipiente deseado. Introducelos de izquierda a derecha <br>
-        Revisa tus apuntes para determinar la cantidad correcta</h1>
+            Agrega sustancias (20ml) a la probeta haciendo click en el recipiente deseado. Introducelos de izquierda a derecha <br>
+        Observa que haz añadido en order agua, aceite, alcohol, jabon y miel. ¿El orden resultante es diferente?, ¿Por que?</h1>
         <div id="probeta" class="animate__animated animate__backInDown"></div>
         <button id="fin" type="button" class="btn btn-primary" onclick="finalProof()">Finalizar práctica</button>
         <div class="materials animate__animated animate__backInDown">
@@ -317,13 +317,14 @@
         <li>Añade tierra (da click en el primer elemento de la lista)</li>
         <li>Añade rebabas de hierro (lo encuentras debajo de la tierra)</li>
         <li>Espera a que las rebabas caigan al fondo del vaso, luego haz click en el imán para empezar con la separación de mezclas </li>
-        <li>Tardará unos segundos recolectando el hierro, luego haz click en “Guardar imán” (Como puedes ver el hierro se ha separado fácilmente de la solución, continuaremos con el filtrado de la tierra).</li>
-        <li>Haz click en el filtro (es el último elemento). Observa que se añade un popote negro que nos ayudará a vertir la sustancia.</li>
-        <li>Haz click en el vaso para colocarlo debajo del filtro </li>
+        <li>Tardará unos segundos recolectando el hierro, puedes observar en la imagen. Luego haz click en “Guardar imán” (Como puedes ver el hierro se ha separado fácilmente de la solución, continuaremos con el filtrado de la tierra).</li>
+        <li>Haz click en el filtro (es el penúltimo elemento). Observa que se añade un popote negro que nos ayudará a vertir la sustancia.</li>
+        <li>Coloca un vaso debajo del filtro (haz click en el vaso pequeño del lado izquierdo) </li>
         <li>Para llenar el filtro selecciona el botón y espera</li>
-        <li>Último paso, selecciona “Filtrar” y observa como el filtro retiene la tierra mientras que el vaso almacena sólo el agua.</li>
-        <li>Guarda los materiales para finalizar tu práctica </li>
+        <li>Último paso para separar la tierra, selecciona “Filtrar” y observa como el vaso almacena sólo el agua.</li>
+        <li>Guarda los materiales, podrás ver las siguientes instrucciones si haces click <a onclick="showIns()" href="#aceite-ins">aquí</a></li>
     </ol>
+   
 </div> 
 <div class="sep-container">
  <!-- <h1 id="">Separación</h1> -->
@@ -371,12 +372,27 @@
 <img id="w-tr" src="./separacion/water-triangule.png" alt="">
 <img id="a-tr" src="./separacion/aceite-triangule.png" alt="">
 <div id="water-final"></div>
-
+<div id="aceite-ins">
+    <p>A continuación separaremos agua de aceite</p> <br>
+    <ol>
+        <li>Haz click en la botella de aceite (es el último elemento)</li>
+        <li>Selecciona un vaso</li>
+        <li>Añade agua al vaso</li>
+        <li>Haciendo click en la botella grande de aceite puedes verterlo sobre el vaso, espera pacientemente a que se mezclen</li>
+        <li>Ya que estas sustancias tienen densidades muy diferentes, tienden a separarse. Para ayudarnos utilizaremos un embudo (haz click en el icono del lado izquierdo)</li>
+        <li>Llena el embudo usando el botón, observa y espera pacientemente hasta que el agua y el aceite estén totalmente separados</li>
+        <li>Retira el agua</li>
+        <li id="hide-last">¡Listo! En la vida real tendrías que abrir y cerrar la válvula del embudo con cuidado hasta que el agua caiga completamente. Hoy separaste tierra, aceite, y rebabas de hierro, ¿Sabes qué métodos usaste? </li>
+    </ol>
+</div>
 
 
 <script>
     function showFin2() {
     document.getElementById("guardar-3").style.display = "block";
+  }
+  function showIns() {
+    document.getElementById("aceite-ins").style.display = "block";
   }
   function showButton() {
     document.getElementById("vaciar-2").style.display = "block";
