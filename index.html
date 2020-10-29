@@ -331,11 +331,12 @@
 <img id="burrs" class="sep-pack" src="./separacion/burrs.png" alt="">
 <img id="vasin" class="sep-pack" src="./separacion/vaso.png" alt="">
 <img id="magnet" class="sep-pack" src="./separacion/magnet.png" alt="">
-<img class="sep-pack" src="./separacion/funnel2.png" alt="">
+<img id="mini-funel" class="sep-pack" src="./separacion/funnel2.png" alt="">
 <p id="em">Embudo</p>
 <img id="water" class="sep-pack" src="./separacion/water.png" awater.pngv>
 <p id="ag">Agua</p>
 <img id="filter" class="sep-pack" src="./separacion/filter.png" alt="">
+<img id="aceit" class="sep-pack" src="./separacion/aceite.png" alt="">
 
 
 <div class="first-sep">
@@ -358,7 +359,31 @@
 <button id="guardar" type="button" class="btn btn-primary">Guardar Imán</button>
 <button id="guardar-2" type="button" class="btn btn-primary">Guardar Materiales</button>
 <button id="guardar-3" type="button" onclick="finalProof3()" class="btn btn-primary">Finalizar práctica</button>
+<button id="vaciar-2" type="button" class="btn btn-primary">Llenar embudo</button>
+<button id="vaciar-3" type="button" class="btn btn-primary">Retirar agua</button>
+
+<img id="big-aceit" class="aceit-b" src="./separacion/aceite.png" alt="">
+<img id="big-vaso" class="vaso-b" src="./separacion/vaso.png" alt="">
+<div id="water-b"></div>
+<div id="aceit-l"></div>
+<img id="funnel-b" src="./separacion/funnel2.png" alt="">
+<img id="to-separ" src="./separacion/water-ground.png" alt="">
+<img id="w-tr" src="./separacion/water-triangule.png" alt="">
+<img id="a-tr" src="./separacion/aceite-triangule.png" alt="">
+<div id="water-final"></div>
+
+
+
 <script>
+    function showFin2() {
+    document.getElementById("guardar-3").style.display = "block";
+  }
+  function showButton() {
+    document.getElementById("vaciar-2").style.display = "block";
+  }
+  function showButton2() {
+    document.getElementById("vaciar-3").style.display = "block";
+  }
     var cnt = 0;
 function cnt_click() {
 cnt += 1;
@@ -369,15 +394,19 @@ cnt2 += 1;
 } 
 $(document).ready(function() {
     $("#vasin").click(function(){ 
+        if(cnt==0){
      $("#vaso-1").show().animate({opacity: '1'}, 2000);
+        }
     });
 
     $("#water").click(function(){
+        if(cnt==0){
     $("#fill-w").animate({
       height: '+=12vw',
       top: '-=12vw'
     });
     cnt += 1;
+}
   });
     $("#ground").click(function(){
         if(cnt==1){
@@ -470,12 +499,97 @@ $(document).ready(function() {
     $("#filt-1, #filt-2, #w-g, #fill-w-3").animate({top: '-=25vw', right: '-=17vw'}, 3000);   
     $("#filt-1, #filt-2").animate({width: '-=14vw'}, 3000); 
     $("#w-g").animate({top: '-=8.5vw', right: '-=6vw', width: '-=2vw'}, 3000); 
-    $("#fill-w-3").animate({top: '-=6vw', right: '-=4vw', width: '-=6vw', height: '-=6vw'}, 3000); 
+    $("#fill-w-3").animate({top: '-=4vw', right: '-=4vw', width: '-=6vw', height: '-=8vw'}, 3000); 
     $("#guardar-2").animate({opacity:'0'},3000);
-    $("#guardar-3").animate({opacity:'1'},5000);
+  //add this to the final step:  showFin2();
+  cnt += 1;
     }
     });
-    
+    $("#aceit").click(function(){ 
+       if(cnt==7){
+            $("#big-aceit").animate({opacity:'1'},3000);
+            cnt += 1;
+       }
+    });
+    $("#vasin").click(function(){ 
+        if(cnt==8){
+            $("#big-vaso").animate({opacity:'1'},3000);
+            cnt += 1;
+       }
+    });
+    $("#water").click(function(){ 
+        if(cnt==9){
+            $("#water-b").animate({
+      height: '+=6vw',
+      top: '-=6vw'
+    },3000);
+            cnt += 1;
+       }
+    });
+    $("#big-aceit").click(function(){ 
+        if(cnt==10){
+            $("#aceit-l").animate({
+      height: '+=6vw',
+      top: '-=6vw'
+    },3000);
+            $("#water-b").animate({
+      height: '+=6vw',
+      top: '-=5.8vw',
+      opacity: '0.45'
+    },15000);
+    $("#aceit-l").animate({
+      height: '+=6vw',
+      opacity: '0.45'
+    },15000);
+    cnt += 1;
+        }
+    });
+    $("#mini-funel").click(function(){ 
+        if(cnt==11){
+            $("#funnel-b, #to-separ").animate({opacity:'1'},3000);
+            showButton(); 
+            cnt += 1;
+       }
+    });
+    $("#vaciar-2").click(function(){ 
+        if(cnt==12){
+            $("#vaciar-2").animate({opacity:'0'},1000);
+            $("#to-separ").animate({opacity:'0.8'},1000);
+            $("#to-separ").animate({top: '-=10vw', left: '-=3.5vw', width: '+=7vw', height: '+=14vw'}, 3000); 
+            $("#water-b, #aceit-l").animate({
+             height: '-=12vw',
+             top: '+=12vw'
+             }, 5000);
+             // wait until separation
+             $("#w-tr, #a-tr").animate({opacity:'0.8'},15000);
+             $("#to-separ").animate({opacity:'0'},15000);
+             showButton2(); 
+            cnt += 1;
+       }
+    });
+
+    $("#vaciar-3").click(function(){ 
+        if(cnt==13){
+            $("#big-vaso").animate({top: '+=44vw', left: '-=9vw', width: '-=4vw'}, 1000); 
+     //water TOP animation
+     $("#w-tr").animate({top: '49.5vw', left: '47vw', width: '1vw', height: '1vw'}, 5000); 
+     //oil animation
+     $("#a-tr").animate({top: '43.5vw', left: '45vw', width: '4.7vw', height: '6vw', opacity: '0.7'}, 5000); 
+     //water BOTTOM animation
+     $("#water-final").animate({
+      height: '+=5vw',
+      top: '-=5vw'
+    }, 7000);
+    $("#vaciar-3").animate({opacity:'0'},1000);
+     //show button and generate code  AND YOU FINISHED
+     showFin2();
+            cnt += 1;
+        }
+    });
+   
+  
+
+
 });
 </script>
 <script>
